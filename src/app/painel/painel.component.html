@@ -8,7 +8,7 @@
             </div>
             <div class="col-sm-6">
                 <div class="d-flex justify-content-end">
-                    <app-tentativas></app-tentativas>
+                    <app-tentativas [tentativasFilho]="tentativasPai"></app-tentativas>
                 </div>
 
             </div>
@@ -19,11 +19,7 @@
                 <h6>{{instrucao}}</h6>
                 <p>{{rodadaFrase.fraseEng}}</p>
                 <div class="form-group">
-                    <textarea 
-                        class="form-control" 
-                        rows="3" 
-                        (input)="atualizaResposta($event)"
-                        [value]="resposta">
+                    <textarea class="form-control" rows="3" (input)="atualizaResposta($event)" [value]="resposta">
                     </textarea>
                 </div>
             </div>
